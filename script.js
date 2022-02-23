@@ -8,9 +8,9 @@ if (! sessionStorage.getItem("visited")) {
 }
 
 var importanceLevels = {
-    0: "#e63532",
-    1: "#f2ce1b",
-    2: "#7fe625",
+    0: "#f05135",
+    1: "#ffd100",
+    2: "#9ce02f",
     3: "#000000"
 };
 
@@ -52,11 +52,7 @@ $(document).bind("click contextmenu", event => {
     if (event.target.tagName == "LI") {
         var task = event.target.innerHTML;
         if (event.type == "click") {
-            if (event.detail == 2) {
-                delete tasks[task]
-            } else {
-                tasks[task].completed = tasks[task].completed == true ? false : true;
-            }
+            tasks[task].completed = tasks[task].completed == true ? false : true;
         } else {
             if (tasks[task].completed == false) {
                 tasks[task].importance = tasks[task].importance == 0 ? 3 : tasks[task].importance - 1;
