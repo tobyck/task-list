@@ -70,11 +70,12 @@ function updateEventListeners() {
             ul.removeChild(ul.lastElementChild);
             setTimeout(() => document.onclick = toggleDone, 5);
             localStorage.setItem("tasks", ul.innerHTML);
+            document.querySelectorAll("li").forEach(draggable => draggable.style.backgroundColor = "");
         };
 
         draggable.ondragover = event => {
             event.preventDefault();
-            event.target.style.backgroundColor = "white";
+            draggable.style.backgroundColor = "white";
             var next = getNextElement(event.clientY);
             var dragging = document.querySelector('.dragging');
             if (dragging !== null) {
