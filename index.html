@@ -2,10 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" type="image/jpg" href="taskListIcon.png">
-    <link rel="stylesheet" href=style.css>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
     <title>Task List</title>
 </head>
 <body>
@@ -14,7 +13,7 @@
         <hr>
         <ul></ul>
     </div>
+    <div id="overlay"></div>
+    <div id="messageBox"><p id="messageText"></p><button onclick="closeMessage()">OK</button></div>
 </body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="script.js"></script>
 </html>
