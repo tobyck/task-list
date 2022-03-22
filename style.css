@@ -98,6 +98,10 @@ li:hover {
     font-weight: 500;
 }
 
+#messageBox button:hover {
+    background-color: #ddd;
+}
+
 .dragging {
     color: transparent !important;
     border: 2px dashed #ddd;
